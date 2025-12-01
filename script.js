@@ -5,20 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links li a');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+    if(hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
-    });
 
-    /* --- Accordion Logic (Smooth) --- */
+        // Close menu when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    /* --- Accordion Logic --- */
     const accordions = document.querySelectorAll('.accordion-item');
 
     accordions.forEach(item => {
