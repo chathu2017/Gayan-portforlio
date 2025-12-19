@@ -63,4 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
-});
+
+    /* --- Logo Scroll to Top (No Hash) --- */
+    const logoLink = document.querySelector('.logo');
+    
+    if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault(); // this Prevents adding # to the URL
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+}); 
