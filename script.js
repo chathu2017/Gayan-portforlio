@@ -61,15 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach(el => observer.observe(el));
-
-    /* --- Logo Scroll to Top (No Hash) --- */
+    /* --- Logo Scroll to Top (Fix URL hash issue) --- */
     const logoLink = document.querySelector('.logo');
     
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevents adding # to the URL
+            e.preventDefault(); 
+            history.replaceState(null, null, window.location.pathname);
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
