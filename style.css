@@ -1,4 +1,8 @@
 /* --- 1. Variables & Reset --- */
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-dark: #0a0a0a;
     --neon-blue: #00f2ff;
@@ -155,6 +159,8 @@ h2 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-main);
+    text-decoration: none;
+    cursor: pointer;
 }
 .dot { color: var(--neon-blue); }
 
