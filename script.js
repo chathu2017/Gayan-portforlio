@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
-            e.preventDefault(); // this Prevents adding # to the URL
+            e.preventDefault(); // Prevents adding # to the URL
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -77,4 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-}); 
+}); // <--- This matches the very first line
